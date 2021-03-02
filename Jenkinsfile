@@ -22,7 +22,7 @@ pipeline {
                     echo "Creating .ssh"
                     mkdir -p /var/lib/jenkins/.ssh
                     ssh-keyscan 192.168.33.11 >> /var/lib/jenkins/.ssh/known_hosts
-                    ssh-keyscan 192.168.33.12 >> /var/lib/jenkins/.ssh/known/hosts
+                    ssh-keyscan 192.168.33.12 >> /var/lib/jenkins/.ssh/known_hosts
 
                     rsync -avz --exclude '.git' --delete -e "ssh -i $sshkey" ./ vagrant@192.168.33.11:/app/
                     rsync -avz --exclude '.git' --delete -e "ssh -i $sshkey" ./ vagrant@192.168.33.12:/app/
