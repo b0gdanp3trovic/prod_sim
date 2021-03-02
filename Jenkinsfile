@@ -16,7 +16,7 @@ pipeline {
 
         stage('deploy') {
             steps {
-                withCredentials([sshUserPrivateKey(credentialsId: "jenkins-ssh", keyFileVariable: 'sshkey')]) {
+                withCredentials([sshUserPrivateKey(credentialsId: "jenkins_ssh", keyFileVariable: 'sshkey')]) {
                     echo 'deploying the software'
                     sh '''#!/bin/bash
                     echo "Creating .ssh"
