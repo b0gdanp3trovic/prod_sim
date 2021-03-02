@@ -29,7 +29,7 @@ pipeline {
 
                     ssh -i $sshkey vagrant@192.168.33.11 "sudo systemctl restart nodeapp"
                     ssh -i $sshkey vagrant@192.168.33.12 "sudo systemctl restart nodeapp"
-
+    	            '''
                 }
             }
         }
