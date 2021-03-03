@@ -1,0 +1,4 @@
+---
+# vars file for nginx-nodejsapp
+docroot: /var/www/nodejs.devops.esc.sh
+server_name: nodejs.devops.esc.sh

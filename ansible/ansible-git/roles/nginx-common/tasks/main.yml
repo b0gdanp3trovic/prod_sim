@@ -1,0 +1,12 @@
+---
+# tasks file for nginx-common
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+
+- name: Make sure nginx is running
+  service:
+    name: nginx
+    state: started 
+    enabled: yes

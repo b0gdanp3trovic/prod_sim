@@ -1,0 +1,32 @@
+
+#### GIT SERVER ###
+
+- hosts: git_server
+  remote_user: vagrant
+  become: yes
+
+  roles:
+      - git-server
+
+##### NodeJS App #######
+- hosts: nodejsapp_frontend
+  remote_user: vagrant
+  become: yes
+
+
+  roles:
+     - common
+     - nginx-common
+     - nginx-nodejsapp
+
+- hosts: nodejsapp_backend
+  remote_user: vagrant
+  become: yes
+
+  roles:
+     - common
+     - nodejs-common
+
+
+##################
+  
